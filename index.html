@@ -1,0 +1,78 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+
+export default function PortfolioSite() {
+  return (
+    <div className="bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 min-h-screen p-6 text-gray-800">
+      <header className="text-center mb-12">
+        <h1 className="text-5xl font-bold">Student Portfolio</h1>
+        <p className="text-lg mt-2">Showcasing Creativity and Talent</p>
+      </header>
+
+      <section id="home" className="mb-12">
+        <Card className="bg-white/80 shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-3xl font-semibold mb-4">Welcome!</h2>
+            <p>This is a vibrant portfolio designed to reflect the energy and creativity of senior class students.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section id="about" className="mb-12">
+        <Card className="bg-white/80 shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-3xl font-semibold mb-4">About Me</h2>
+            <p>Hi! I’m a senior class student passionate about learning, exploring, and creating. Here's a glimpse into my academic and creative journey.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section id="testimonials" className="mb-12">
+        <Card className="bg-white/80 shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-3xl font-semibold mb-4">Testimonials</h2>
+            <ul className="list-disc ml-6">
+              <li>“A highly motivated student with a bright future.” - Teacher A</li>
+              <li>“Always ready to help and lead.” - Classmate B</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section id="gallery" className="mb-12">
+        <Card className="bg-white/80 shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-3xl font-semibold mb-4">Gallery</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <img src="https://via.placeholder.com/150" alt="Project 1" className="rounded-xl shadow" />
+              <img src="https://via.placeholder.com/150" alt="Project 2" className="rounded-xl shadow" />
+              <img src="https://via.placeholder.com/150" alt="Project 3" className="rounded-xl shadow" />
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section id="contact" className="mb-12">
+        <Card className="bg-white/80 shadow-lg">
+          <CardContent className="p-6">
+            <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
+            <form className="space-y-4">
+              <Input type="text" placeholder="Full Name" required />
+              <Input type="email" placeholder="Email Address" required />
+              <Input type="text" placeholder="School / Class" required />
+              <Textarea placeholder="Your Message" required />
+              <Button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white">Submit</Button>
+            </form>
+          </CardContent>
+        </Card>
+      </section>
+
+      <footer className="text-center text-sm text-gray-700">
+        &copy; 2025 Student Portfolio. All rights reserved.
+      </footer>
+    </div>
+  );
+}
